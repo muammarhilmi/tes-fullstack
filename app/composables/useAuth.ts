@@ -54,6 +54,8 @@ export function useAuth() {
       // ignore
     }
     setToken(null)
+    const tokenCookie = useCookie("auth_session")
+    tokenCookie.value = null
     localStorage.removeItem("token")
     user.value = null
     permissions.value = []

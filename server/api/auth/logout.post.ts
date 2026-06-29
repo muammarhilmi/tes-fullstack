@@ -18,5 +18,7 @@ export default defineEventHandler(async (event) => {
 
   await logActivity(event, "Logout", `User ${decoded.nama} logout`, decoded.id)
 
+  deleteCookie(event, "auth_session")
+
   return { success: true, message: "Logout berhasil" }
 })
