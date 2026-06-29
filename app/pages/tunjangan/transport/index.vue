@@ -41,7 +41,7 @@
 </template>
 
 <script setup>
-definePageMeta({ title: "Tunjangan Transport", middleware: "auth" })
+definePageMeta({ title: "Tunjangan Transport", })
 useSeoMeta({ title: "Tunjangan Transport" })
 import { formatRupiah } from "~/utils/formatRupiah.js"
 const { get } = useApi()

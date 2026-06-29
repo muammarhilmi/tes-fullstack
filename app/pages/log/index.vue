@@ -54,7 +54,7 @@
 </template>
 
 <script setup>
-definePageMeta({ title: "Log Aktifitas", middleware: "auth" })
+definePageMeta({ title: "Log Aktifitas", })
 useSeoMeta({ title: "Log Aktifitas" })
 import { IconSearch } from "@tabler/icons-vue"
 const { get } = useApi()

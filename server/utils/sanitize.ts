@@ -82,7 +82,7 @@ export function validatePasswordStrength(password: string): { valid: boolean; me
 export function validateUsername(username: string): { valid: boolean; message: string } {
   if (username.length < 6) return { valid: false, message: "Username minimal 6 karakter" };
   if (/\s/.test(username)) return { valid: false, message: "Username tidak boleh mengandung spasi" };
-  if (!/^[a-z0-9]+$/.test(username))
-    return { valid: false, message: "Username hanya boleh huruf kecil dan angka" };
+  if (!/^[a-zA-Z0-9]+$/.test(username))
+    return { valid: false, message: "Username hanya boleh huruf dan angka" };
   return { valid: true, message: "OK" };
 }

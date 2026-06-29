@@ -64,13 +64,16 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 401, message: "Password salah" });
   }
 
+  const rememberMe = body.remember === true;
+  const expiresIn = rememberMe ? "30d" : "3m"; // 30 hari atau 3 menit
+
   const token = signToken({
     id: user.id,
     id_role: user.id_role,
     id_pegawai: user.id_pegawai,
     username: user.username,
     nama: user.nama || user.nama_pegawai,
-  });
+  }, expiresIn);
 
   console.log("🔐 JWT created:", token)
 
@@ -86,7 +89,7 @@ export default defineEventHandler(async (event) => {
   setCookie(event, "auth_session", token, {
     httpOnly: false,
     secure: process.env.NODE_ENV === "production",
-    maxAge: 60 * 60 * 8,                           // Aktif selama 8 jam
+    maxAge: rememberMe ? 60 * 60 * 24 * 30 : 60 * 3, // 30 hari atau 3 menit
     path: "/",
     sameSite: "lax",
   });

@@ -73,7 +73,7 @@ import { IconEye, IconEyeOff } from "@tabler/icons-vue"
 const config = useRuntimeConfig()
 const { login } = useAuth()
 const router = useRouter()
-const tokenCookie = useCookie("auth_session", { maxAge: 60 * 60 * 8, path: "/" })
+const tokenCookie = useCookie("auth_session", { path: "/" })
 
 const siteKey = config.public.recaptchaSiteKey
 const loading = ref(false)

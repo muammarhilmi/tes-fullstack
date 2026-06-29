@@ -1,5 +1,5 @@
 <script setup>
-definePageMeta({ title: "Profil Saya", middleware: "auth" })
+definePageMeta({ title: "Profil Saya", })
 useSeoMeta({ title: "Profil Saya" })
 
 import { IconEye, IconEyeOff, IconCheck, IconX } from "@tabler/icons-vue"

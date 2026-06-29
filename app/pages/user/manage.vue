@@ -164,7 +164,7 @@
 </template>
 
 <script setup>
-definePageMeta({ title: "Manajemen User", middleware: "auth" })
+definePageMeta({ title: "Manajemen User", })
 useSeoMeta({ title: "Manajemen User" })
 import { IconPencil, IconPlus, IconSearch, IconTrash, IconEye, IconEyeOff, IconCheck, IconX } from "@tabler/icons-vue"
 const { get, post, put, delete: apiDelete } = useApi()

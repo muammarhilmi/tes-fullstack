@@ -1,5 +1,5 @@
 <script setup>
-definePageMeta({ title: "Setting Tunjangan Transport", middleware: "auth" })
+definePageMeta({ title: "Setting Tunjangan Transport", })
 useSeoMeta({ title: "Setting Tunjangan Transport" })
 import { formatRupiah } from "~/utils/formatRupiah.js"
 const { get, put } = useApi()

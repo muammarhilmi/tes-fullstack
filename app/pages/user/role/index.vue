@@ -37,7 +37,7 @@
 </template>
 
 <script setup>
-definePageMeta({ title: "Manajemen Role", middleware: "auth" })
+definePageMeta({ title: "Manajemen Role", })
 useSeoMeta({ title: "Manajemen Role" })
 import { IconSearch } from "@tabler/icons-vue"
 const { get } = useApi()

@@ -2,7 +2,7 @@
 definePageMeta({
   title: "Data Pegawai",
   layout: false,
-  middleware: "auth",
+  
 });
 
 useSeoMeta({ title: "Data Pegawai" });

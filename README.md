@@ -2,6 +2,8 @@
 
 Aplikasi web fullstack berbasis **Nuxt 4 (Vue 3)** untuk pengelolaan administrasi data pegawai, tunjangan, peran pengguna (role), dan audit log aktivitas. Aplikasi ini menggunakan **Nitro Server Engine** sebagai backend API terintegrasi dan **Tabler UI** untuk antarmuka dashboard admin yang modern dan responsif.
 
+> **Live Demo (Production):** [https://tes-fullstack-production.up.railway.app/](https://tes-fullstack-production.up.railway.app/)
+
 ---
 
 ## 🛠️ Teknologi yang Digunakan (Tech Stack)

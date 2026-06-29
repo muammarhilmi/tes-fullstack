@@ -34,11 +34,11 @@ export default defineEventHandler(async (event) => {
     params.push(query.jenis_kontrak)
   }
   if (query.masa_kerja_min) {
-    where += " AND TIMESTAMPDIFF(YEAR, p.tanggal_masuk, CURDATE()) >= ?"
+    where += " AND TIMESTAMPDIFF(YEAR, p.tanggal_masuk, CURDATE()) <= ?"
     params.push(Number(query.masa_kerja_min))
   }
   if (query.masa_kerja_max) {
-    where += " AND TIMESTAMPDIFF(YEAR, p.tanggal_masuk, CURDATE()) <= ?"
+    where += " AND TIMESTAMPDIFF(YEAR, p.tanggal_masuk, CURDATE()) >= ?"
     params.push(Number(query.masa_kerja_max))
   }
 

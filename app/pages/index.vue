@@ -1,7 +1,6 @@
 <script setup>
 definePageMeta({
-  title: "Dashboard",
-  middleware: "auth",
+  title: "Dashboard"
 });
 
 useSeoMeta({ title: "Dashboard" });

@@ -82,8 +82,8 @@ export default defineEventHandler(async (event) => {
       const kmRounded =
         km - Math.floor(km) >= 0.5 ? Math.ceil(km) : Math.floor(km);
 
-      // Hitung nominal tunjangan (sengaja ada bug di sini sesuai permintaan, tidak dikali hariKerja)
-      const nominal = baseFare * kmRounded;
+      // Hitung nominal tunjangan
+      const nominal = baseFare * kmRounded * hariKerja;
 
       await conn.execute(
         `INSERT INTO tunjangan_transport
