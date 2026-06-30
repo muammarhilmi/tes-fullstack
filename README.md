@@ -105,7 +105,11 @@ Setelah `.env` disesuaikan, jalankan skrip migrasi untuk menyiapkan database (ta
 ```bash
 node server/migrations/run.mjs
 ```
-*Username default:* `superadmin` / *Password default:* `Admin@123`
+
+**Akun Default untuk Login:**
+- **Superadmin**: Username: `superadmin` / Password: `Admin@123`
+- **Manager HRD**: Username: `manager_hrd` / Password: `Admin@123`
+- **Admin HRD**: Username: `admin_hrd` / Password: `Admin@123`
 
 ### 4. Jalankan Server Development
 Jalankan perintah berikut untuk memulai server pengembang:
